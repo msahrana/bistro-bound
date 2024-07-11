@@ -9,7 +9,12 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "http://localhost:5174"],
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://bistro-bound.web.app",
+    "https://bistro-bound.firebaseapp.com",
+  ],
   credentials: true,
   optionSuccessStatus: 200,
 };
